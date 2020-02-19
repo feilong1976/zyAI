@@ -1,7 +1,8 @@
+# coding=utf-8
 import sys 
 reload(sys) 
 sys.setdefaultencoding('utf8')
-# coding=utf-8
+
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -50,7 +51,7 @@ if st.sidebar.checkbox('咳嗽白痰'):
 	cout=cout+1
 	d=d+5
 	f=f+5
-if st.sidebar.checkbox('咳嗽黄痰'):
+elif st.sidebar.checkbox('咳嗽黄痰'):
 	a=a+6
 	b=b+7
 	c=c+5
@@ -62,7 +63,7 @@ if st.sidebar.checkbox('舌苔白腻'):
 	c=c+5
 	cout=cout+1
 	d=d+5
-if st.sidebar.checkbox('舌苔黄腻'):
+elif st.sidebar.checkbox('舌苔黄腻'):
 	a=a+6
 	b=b+5
 	c=c+7
@@ -91,7 +92,7 @@ if st.sidebar.checkbox('流清涕'):
 	c=c+5
 	cout=cout+1
 	e=e+5
-if st.sidebar.checkbox('流黄涕'):
+elif st.sidebar.checkbox('流黄涕'):
 	a=a+6
 	b=b+5
 	c=c+7
@@ -181,17 +182,17 @@ if st.sidebar.checkbox('爱喝水'):
 	cout=cout+1	
 	d=d-5
 	h=h+5
-if st.sidebar.checkbox('喜热水'):
-	a=a+6
-	b=b+5
-	c=c+5
-	cout=cout+1
-if st.sidebar.checkbox('喜凉水'):
-	a=a+5
-	b=b+5
-	c=c+7
-	cout=cout+1
-	h=h+5
+	if st.sidebar.checkbox('喜热水'):
+		a=a+6
+		b=b+5
+		c=c+5
+		cout=cout+1
+	elif st.sidebar.checkbox('喜凉水'):
+		a=a+5
+		b=b+5
+		c=c+7
+		cout=cout+1
+		h=h+5
 if st.sidebar.checkbox('呕吐或欲呕'):
 	a=a+5
 	b=b+8
@@ -203,7 +204,7 @@ if st.sidebar.checkbox('尿偏黄'):
 	c=c+7
 	cout=cout+1
 	i=i+5
-if st.sidebar.checkbox('尿偏白'):
+elif st.sidebar.checkbox('尿偏白'):
 	a=a+7
 	b=b+5
 	c=c+5
