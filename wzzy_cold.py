@@ -175,7 +175,7 @@ if st.sidebar.checkbox('不爱喝水'):
 	c=c+5
 	cout=cout+1
 	d=d+5
-if st.sidebar.checkbox('爱喝水'):
+elif st.sidebar.checkbox('爱喝水'):
 	a=a+5
 	b=b+5
 	c=c+8
